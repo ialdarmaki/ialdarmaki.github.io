@@ -67,7 +67,7 @@ Loka Li*, **Ibrahim Aldarmaki** *, Minghao Fu, Wong Yu Kang, Yunlong Deng, Qiang
 ### Open-Source Projects:
 * Navigating Through The Unknown (Kalman Filter) \| [Jupyter Notebook](https://github.com/i-aldarmaki/Navigating-Through-the-Unknown/blob/main/Navigating_Through_The_Unknown.ipynb)
 * C(ube)ARnival (Augmented Reality) \| [Jupyter Notebook](https://github.com/i-aldarmaki/CubeARnival/blob/main/CubeARnival_chessboard.ipynb)
-* Deep Neural Networks for Direction of Arrival Estimation using Circular Microphone Arrays (BEng Thesis) \| [Thesis](file/BEng_Thesis_Ibrahim_Aldarmaki.pdf)
+* Deep Neural Networks for Direction of Arrival Estimation using Circular Microphone Arrays (BEng Thesis) \| [Thesis](files/BEng_Thesis_Ibrahim_Aldarmaki.pdf)
 <!--* Social Media Reviews Sentiment Analysis (Course Project) \| [Report](file/DAML4_CW2.pdf)-->
 
 
