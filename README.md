@@ -28,7 +28,7 @@
 
 ***
 ### About:
-Hi! I am a graduate student at the School of Computer Science at Carnegie Mellon University, where I am supervised by [Prof. Bhiksha Raj](https://cmu-mlsp.github.io/team/bhiksha_raj)!. I am currently researching in the area of Machine Learning and Deep Learning, with a main interest in representation learning.
+Hi! I am a graduate student at the School of Computer Science at Carnegie Mellon University, where I am supervised by [Prof. Bhiksha Raj](https://cmu-mlsp.github.io/team/bhiksha_raj)!. I am currently conducting research in Machine Learning and Deep Learning, with a primary focus on representation learning.
 
 I am broadly interested in machine/deep learning, causality, and information theory. Prior to joining CMU, I was working at MBZUAI with Prof. Jin Tian and Prof. Kun Zhang on causality and machine learning.
 
