@@ -21,7 +21,7 @@
 
 <p align="center" width="100%" border-radius="200px">
     <a href="mailto:ibrahim.m.aldarmaki@outlook.com">Email</a>
-    <a href="file/Ibrahim_Resume_2025_April-2.pdf">CV</a>
+    <a href="files/Ibrahim_Resume_2025_April-2.pdf">CV</a>
     <a href="https://github.com/i-aldarmaki">GitHub</a>
 </p>
 
@@ -76,8 +76,8 @@ Loka Li*, **Ibrahim Aldarmaki** *, Minghao Fu, Wong Yu Kang, Yunlong Deng, Qiang
 * Erdös Number: 4
 * Hikes:
 <p align="center" width="50%" border-radius="200px">
-    <img width="20%" src="file/images/hike_4.jpg">  
-    <img width="20%" src="file/images/hike_3.jpg"> 
-    <img width="20%" src="file/images/hike_2.jpg"> 
-    <img width="20%" src="file/images/hike_1.jpg"> 
+    <img width="20%" src="files/images/hike_4.jpg">  
+    <img width="20%" src="files/images/hike_3.jpg"> 
+    <img width="20%" src="files/images/hike_2.jpg"> 
+    <img width="20%" src="files/images/hike_1.jpg"> 
 </p>
