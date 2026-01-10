@@ -1,4 +1,4 @@
-[//]: <> (Ibrahim Aldarmaki)
+<!--[//]: <> (Ibrahim Aldarmaki)
 
 [//]: #![fake_cameraman](https://github.com/i-aldarmaki/personal_website/assets/139388233/7a287150-afc5-4601-ab8e-f75b1be9687b?classes=float-right)
 [//]:<p align="center" width="100%" border-radius="200px">
@@ -9,7 +9,7 @@
 [//]:#![transparent_picture](https://github.com/i-aldarmaki/personal_website/assets/139388233/578ae050-a75a-4e30-b461-1c596d8584a2)
 
 [//]:#!kjhk[CV](https://github.com/i-aldarmaki/personal_website/blob/f7ddeb0e8637c0f228f162829755e307e26ad6b0/file/Ibrahim_Resume_Jan_2025.pdf)[GitHub](https://github.com/i-aldarmaki)
-
+-->
 
 <p align="center" width="100%" border-radius="200px">
     <img width="32%" src="https://github.com/i-aldarmaki/personal_website/assets/139388233/578ae050-a75a-4e30-b461-1c596d8584a2"> 
