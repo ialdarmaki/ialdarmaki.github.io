@@ -28,16 +28,11 @@
 
 ***
 ### About:
-Hi! I am a graduate student at the School of Computer Science at Carnegie Mellon University, where I am supervised by [Prof. Bhiksha Raj](https://cmu-mlsp.github.io/team/bhiksha_raj)!. I am currently researching in the area of Machine Learning and Deep Learning.
+Hi! I am a graduate student at the School of Computer Science at Carnegie Mellon University, where I am supervised by [Prof. Bhiksha Raj](https://cmu-mlsp.github.io/team/bhiksha_raj)!. I am currently researching in the area of Machine Learning and Deep Learning, with a main interest in representation learning.
 
-I am broadly interested in machine/deep learning, causality, and information theory. Prior to joining CMU, I was working at MBZUAI with Prof. Jin Tian and Prof. Kun Zhang on causality and machine learning. Please refer to my [CV](file/Ibrahim_Resume_2025_April-2.pdf). (Last updated: January 2025).
+I am broadly interested in machine/deep learning, causality, and information theory. Prior to joining CMU, I was working at MBZUAI with Prof. Jin Tian and Prof. Kun Zhang on causality and machine learning.
 
-<!--I recently worked as a researcher at Mohamed bin Zayed University of Artificial Intelligence (MBZUAI). During my time at MBZUAI, I worked/collaborated with 
-[Prof. Thamar Solorio](https://mbzuai.ac.ae/study/faculty/thamar-solorio/), 
-[Prof. Bhiksha Raj](https://cmu-mlsp.github.io/team/bhiksha_raj), and 
-[Dr. Hanan Aldarmaki](https://mbzuai.ac.ae/study/faculty/hanan-al-darmaki/)
-. Prior to joining MBZUAI, I also worked at several other institutions. For a more detailed description of my background and experience, please refer to my [CV](file/Ibrahim_Resume_Jan_2025.pdf). (Last updated: January 2025)
--->
+<!--
 ***
 ### News:
 - [Dec. 2025] Co-First Author of "How Effective is Your Rebuttal? Identifying Causal Models from the OpenReview System" at NeurIPS 2025 Workshop CauScien.
@@ -48,7 +43,7 @@ I am broadly interested in machine/deep learning, causality, and information the
 - [Sep. 2024] Selected for Al Nokhba Program and Joined Khalifa University as a Researcher.
 - [Dec. 2023] Joined Mohammed Bin Zayed University of Artificial Intelligence (MBZUAI) as a Researcher.
 - [Jul. 2023] Graduated with a BEng in Electronics and Electrical Engineering from The University of Edinburgh.
-
+-->
 ***
 ### Publications:
 **How Effective is Your Rebuttal? Identifying Causal Models from the OpenReview System**\
@@ -73,7 +68,7 @@ Loka Li*, **Ibrahim Aldarmaki** *, Minghao Fu, Wong Yu Kang, Yunlong Deng, Qiang
 * Navigating Through The Unknown (Kalman Filter) \| [Jupyter Notebook](https://github.com/i-aldarmaki/Navigating-Through-the-Unknown/blob/main/Navigating_Through_The_Unknown.ipynb)
 * C(ube)ARnival (Augmented Reality) \| [Jupyter Notebook](https://github.com/i-aldarmaki/CubeARnival/blob/main/CubeARnival_chessboard.ipynb)
 * Deep Neural Networks for Direction of Arrival Estimation using Circular Microphone Arrays (BEng Thesis) \| [Thesis](file/BEng_Thesis_Ibrahim_Aldarmaki.pdf)
-* Social Media Reviews Sentiment Analysis (Course Project) \| [Report](file/DAML4_CW2.pdf)
+<!--* Social Media Reviews Sentiment Analysis (Course Project) \| [Report](file/DAML4_CW2.pdf)-->
 
 
 ***
