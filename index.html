@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibrahim Aldarmaki — ML Researcher at CMU</title>
+  <meta name="description" content="Ibrahim Aldarmaki is a graduate student at Carnegie Mellon University's School of Computer Science, researching machine learning, representation learning, and causality.">
+  <meta name="keywords" content="Ibrahim Aldarmaki, CMU, Carnegie Mellon, machine learning, deep learning, representation learning, causality">
+  <meta property="og:title" content="Ibrahim Aldarmaki — ML Researcher at CMU">
+  <meta property="og:description" content="Graduate student at CMU SCS researching machine learning and causality.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1814;
+      --ink-muted: #6b6760;
+      --ink-faint: #b0ada8;
+      --paper: #f5f2ed;
+      --paper-warm: #ede9e2;
+      --accent: #c0392b;
+      --accent-soft: #e8d5d3;
+      --rule: #d8d4ce;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+      --mono: 'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.4;
+    }
+
+    /* Layout */
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Header */
+    header {
+      padding: 72px 0 56px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: end;
+      border-bottom: 1px solid var(--rule);
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .header-text {}
+
+    .name {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .name em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .tagline {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header-links a {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      padding: 6px 14px;
+      border: 1px solid var(--ink);
+      border-radius: 2px;
+      transition: background 0.18s, color 0.18s;
+    }
+
+    .header-links a:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .avatar-wrap {
+      width: 140px;
+      flex-shrink: 0;
+    }
+
+    .avatar-wrap img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      filter: grayscale(15%);
+      border: 3px solid var(--paper-warm);
+      box-shadow: 0 0 0 1px var(--rule);
+      display: block;
+    }
+
+    /* Sections */
+    section {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--rule);
+      animation: fadeUp 0.7s ease both;
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    /* About */
+    .about-text {
+      font-size: 1.02rem;
+      color: var(--ink);
+      max-width: 620px;
+    }
+
+    .about-text p { margin-bottom: 14px; }
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .about-text a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 3px;
+      transition: color 0.15s;
+    }
+    .about-text a:hover { color: var(--accent); }
+
+    /* Publications */
+    .pub-list { display: flex; flex-direction: column; gap: 32px; }
+
+    .pub {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 0 20px;
+    }
+
+    .pub-year {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-faint);
+      padding-top: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .pub-body {}
+
+    .pub-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      line-height: 1.35;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .pub-authors {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      margin-bottom: 4px;
+    }
+
+    .pub-authors strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .pub-venue {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+    }
+
+    /* Projects */
+    .project-list { display: flex; flex-direction: column; gap: 0; }
+
+    .project-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 24px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .project-item:last-child { border-bottom: none; }
+
+    .project-name {
+      font-size: 0.97rem;
+      color: var(--ink);
+    }
+
+    .project-link {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      transition: color 0.15s;
+    }
+
+    .project-link:hover { color: var(--accent); }
+
+    /* Misc */
+    .misc-body {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .misc-item {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    .misc-key {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--ink-faint);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+
+    .misc-val {
+      font-size: 0.97rem;
+      color: var(--ink);
+    }
+
+    /* Hike photos */
+    .hike-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .hike-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 4px;
+      filter: grayscale(20%);
+      transition: filter 0.25s, transform 0.25s;
+    }
+
+    .hike-grid img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.03);
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-faint);
+      letter-spacing: 0.04em;
+    }
+
+    /* Animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    section:nth-child(2) { animation-delay: 0.05s; }
+    section:nth-child(3) { animation-delay: 0.1s; }
+    section:nth-child(4) { animation-delay: 0.15s; }
+    section:nth-child(5) { animation-delay: 0.2s; }
+
+    @media (max-width: 560px) {
+      header { grid-template-columns: 1fr; gap: 28px; }
+      .avatar-wrap { order: -1; }
+      .avatar-wrap img { width: 100px; height: 100px; }
+      .hike-grid { grid-template-columns: repeat(2, 1fr); }
+      .pub { grid-template-columns: 1fr; }
+      .pub-year { margin-bottom: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <div class="header-text">
+        <p class="tagline">Graduate Researcher · CMU SCS</p>
+        <h1 class="name">Ibrahim<br><em>Aldarmaki</em></h1>
+        <nav class="header-links">
+          <a href="mailto:ibrahim.m.aldarmaki@outlook.com">Email</a>
+          <a href="files/CV_Ibrahim_Aldarmaki.pdf">CV</a>
+          <a href="https://github.com/i-aldarmaki">GitHub</a>
+        </nav>
+      </div>
+      <div class="avatar-wrap">
+        <img src="https://github.com/i-aldarmaki/personal_website/assets/139388233/578ae050-a75a-4e30-b461-1c596d8584a2" alt="Ibrahim Aldarmaki">
+      </div>
+    </header>
+
+    <section>
+      <p class="section-label">About</p>
+      <div class="about-text">
+        <p>Hi! I am a graduate student at the School of Computer Science at Carnegie Mellon University, where I am supervised by <a href="https://cmu-mlsp.github.io/team/bhiksha_raj">Prof. Bhiksha Raj</a>. I am currently conducting research in Machine Learning and Deep Learning, with a primary focus on representation learning.</p>
+        <p>I am broadly interested in machine/deep learning, causality, and information theory. Prior to joining CMU, I was working at MBZUAI with Prof. Jin Tian and Prof. Kun Zhang on causality and machine learning.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Publications</p>
+      <div class="pub-list">
+
+        <div class="pub">
+          <span class="pub-year">2025</span>
+          <div class="pub-body">
+            <p class="pub-title">How Effective is Your Rebuttal? Identifying Causal Models from the OpenReview System</p>
+            <p class="pub-authors">Loka Li*, <strong>Ibrahim Aldarmaki*</strong>, Minghao Fu, Wong Yu Kang, Yunlong Deng, Qiang Huang, Jing Yang, Jin Tian, Guangyi Chen, Kun Zhang</p>
+            <p class="pub-venue">NeurIPS Workshop CauScien, 2025</p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2025</span>
+          <div class="pub-body">
+            <p class="pub-title">Wi-Fi Sensing for Motion Detection using ESP-32 and Raspberry Pi 4: A Comparison</p>
+            <p class="pub-authors"><strong>Ibrahim Aldarmaki</strong>, Aysha Alteneiji, Kin Poon, Ubaid Ahmed, Ahmed Suliman</p>
+            <p class="pub-venue">CCNCPS, 2025</p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <p class="pub-title">RelUNet: Relative Channel Fusion U-Net for Multichannel Speech Enhancement</p>
+            <p class="pub-authors"><strong>Ibrahim Aldarmaki</strong>, Thamar Solorio, Bhiksha Raj, Hanan Aldarmaki</p>
+            <p class="pub-venue">arXiv:2410.05019, 2024</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Open-Source Projects</p>
+      <div class="project-list">
+        <div class="project-item">
+          <span class="project-name">Navigating Through The Unknown (Kalman Filter)</span>
+          <a class="project-link" href="https://github.com/i-aldarmaki/Navigating-Through-the-Unknown/blob/main/Navigating_Through_The_Unknown.ipynb">Notebook →</a>
+        </div>
+        <div class="project-item">
+          <span class="project-name">C(ube)ARnival (Augmented Reality)</span>
+          <a class="project-link" href="https://github.com/i-aldarmaki/CubeARnival/blob/main/CubeARnival_chessboard.ipynb">Notebook →</a>
+        </div>
+        <div class="project-item">
+          <span class="project-name">Deep Neural Networks for Direction of Arrival Estimation using Circular Microphone Arrays</span>
+          <a class="project-link" href="files/BEng_Thesis_Ibrahim_Aldarmaki.pdf">BEng Thesis →</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Miscellaneous</p>
+      <div class="misc-body">
+        <div class="misc-item">
+          <span class="misc-key">Erdős №</span>
+          <span class="misc-val">4</span>
+        </div>
+        <div class="misc-item" style="align-items: flex-start;">
+          <span class="misc-key">Hikes</span>
+          <div class="hike-grid" style="flex:1">
+            <img src="files/images/hike_4.jpg" alt="Hike photo">
+            <img src="files/images/hike_3.jpg" alt="Hike photo">
+            <img src="files/images/hike_2.jpg" alt="Hike photo">
+            <img src="files/images/hike_1.jpg" alt="Hike photo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Ibrahim Aldarmaki · Carnegie Mellon University
+    </footer>
+
+  </div>
+</body>
+</html>
