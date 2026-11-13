@@ -1,0 +1,93 @@
+/* Plain and readable. One typeface, no web fonts, no animation. */
+
+body {
+  margin: 0;
+  background: #fcfcfa;
+  color: #222;
+  font-family: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+a { color: #2f5f8a; }
+a:hover { color: #173a5c; }
+
+h1 {
+  font-size: 2em;
+  font-weight: normal;
+  margin: 0 0 4px;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 40px 0 10px;
+}
+
+p { margin: 0 0 14px; }
+
+.top {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.top .text { flex: 1; }
+.top img.me {
+  width: 210px;
+  height: auto;
+}
+.subtitle { color: #555; margin: 0 0 10px; }
+.links a { margin-right: 4px; }
+
+.nav { font-size: 0.95em; margin-bottom: 28px; }
+
+ul { padding-left: 20px; margin: 0; }
+li { margin-bottom: 6px; }
+
+.news li { list-style: none; margin-left: -20px; }
+.news .when { color: #777; display: inline-block; width: 90px; }
+
+.pub { margin-bottom: 16px; }
+.pub .title { font-weight: bold; }
+.pub .venue { font-style: italic; color: #444; }
+
+/* photos */
+.photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 18px;
+  margin-top: 12px;
+}
+.photos figure { margin: 0; }
+.photos img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+.photos figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.45;
+}
+
+footer {
+  margin-top: 56px;
+  font-size: 0.85em;
+  color: #888;
+}
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  main { padding-top: 28px; }
+  .top { flex-direction: column-reverse; gap: 16px; }
+  .top img.me { width: 160px; }
+  .news .when { display: block; width: auto; }
+}
